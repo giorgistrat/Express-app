@@ -1,8 +1,1 @@
-[
-  {
-    "title": "Test",
-    "price": "12",
-    "imageUrl": "https://sawmilldesigns.com/app/uploads/2024/06/Virginia-White-Oak-Table-Frisco-Fancy-FEATURE-200x200.jpg",
-    "description": "This is table"
-  }
-]
+[{"id":"1","title":"Table","price":"25","imageUrl":"https://sawmilldesigns.com/app/uploads/2024/06/Virginia-White-Oak-Table-Frisco-Fancy-FEATURE-200x200.jpg","description":"This is Big table"}]

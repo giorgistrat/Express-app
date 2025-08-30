@@ -3,4 +3,32 @@
 
     <body>
         <%- include('../includes/navigation.ejs') %>
+
+        <main>
+            <% if (products.length > 0) { %>
+                <ul>
+                    <% products.forEach((item) => { %>
+                        <li>
+                            <h1><%= item.title %></h1>
+                            <h2>Quantity: <%= item.cartItem.quantity %></h2>
+                            <form action="/cart-delete-item" method="POST">
+                                <input type="hidden" name="productId" value="<%= item.id %>">
+                                <button class="btn" type="submit">Delete</button>
+                            </form>
+                        </li>
+                    <% }); %>
+                </ul>
+                <hr>
+                <div class="centered">
+                    <form action="/create-order" method="POST">
+                        <button class="btn" type="submit">Order Now</button>
+                    </form>
+                </div>
+                
+
+            <% } else { %>
+                <p>Your cart is empty.</p>
+            <% } %>
+        </main>
+
         <%- include('../includes/end.ejs') %>
